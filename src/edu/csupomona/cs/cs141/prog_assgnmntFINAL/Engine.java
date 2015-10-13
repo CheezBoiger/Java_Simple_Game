@@ -190,7 +190,7 @@ public class Engine implements Serializable{
 			{
 				check = false;
 			}
-		}while(check == true);
+		}while(check);
 	}
 	
 	/**
@@ -393,7 +393,7 @@ public class Engine implements Serializable{
 	//request for the symbol representation of the room
 	public String getRoomSymbol(int number)
 	{
-		if(reveal == true || powerups[0].isActive() == false)
+		if(reveal || !powerups[0].isActive())
 		{
 			rooms[number].cheat(true);
 		}
