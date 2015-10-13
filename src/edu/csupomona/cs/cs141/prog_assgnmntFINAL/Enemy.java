@@ -59,7 +59,7 @@ public class Enemy implements BallOfEnergy,Serializable{
 	 * Constructor of the enemy that is to set the object boolean values to true.
 	 * @param alive - boolean value that sets the enemy alive to true. 
 	 */
-	public Enemy( boolean alive)
+	public Enemy(boolean alive)
 	{
 		hidden = true;
 		this.alive = alive;
@@ -114,7 +114,7 @@ public class Enemy implements BallOfEnergy,Serializable{
 	//determine whether enemy will show the symbol
 	public String getSymbol()
 	{
-		if( hidden == true )
+		if(hidden)
 		{
 			symbol = "X";
 			return symbol;
@@ -173,7 +173,7 @@ public class Enemy implements BallOfEnergy,Serializable{
 		//check whether the enemy stabbed the player
 		boolean stab = false;
 
-		if( isAlive() == true )
+		if(isAlive())
 		{
 			//check top of the grid
 			if( row == 0 )
@@ -261,7 +261,7 @@ public class Enemy implements BallOfEnergy,Serializable{
 			}
 		}
 		//check if player is invincible
-		if ( player.isImpenetrable() == true)
+		if (player.isImpenetrable())
 		{
 			stab = false;
 		}
@@ -339,7 +339,7 @@ public class Enemy implements BallOfEnergy,Serializable{
     
     public JLabel getPic()
     {
-		if( hidden == true )
+		if(hidden)
 		{
 			img = new JLabel(new ImageIcon("GameImgs/FogAlpha.jpg"));
 			return img;
