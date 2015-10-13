@@ -98,7 +98,7 @@ public class InterfaceGUI implements KeyListener {
 				
 				for(int e = 0; e < 6; e++)
 				{
-					if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e)  && engine.isEnemyAlive(e) == true)
+					if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e)  && engine.isEnemyAlive(e))
 					{
 						counter++;
 					}
@@ -120,7 +120,7 @@ public class InterfaceGUI implements KeyListener {
 					}
 					for(int e = 0; e < 6; e++)
 					{
-						if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e) && limit < 1 && engine.isEnemyAlive(e) == true)
+						if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e) && limit < 1 && engine.isEnemyAlive(e))
 						{
 							JLabel imgEnemy = engine.getEnemyPic(e);
 							panel.add(imgEnemy);
@@ -131,7 +131,7 @@ public class InterfaceGUI implements KeyListener {
 
 					for( int p = 0; p < 3; p++)
 					{
-						if( engine.isPowerupActivated(p) == true)
+						if(engine.isPowerupActivated(p))
 						{
 							if( i == engine.getPowerupRow(p) && j == engine.getPowerupCol(p) && limit < 1)
 							{
@@ -257,7 +257,7 @@ public class InterfaceGUI implements KeyListener {
 				
 				for( int p = 0; p < 3; p++)
 				{
-					if( engine.isPowerupActivated(p) == true)
+					if(engine.isPowerupActivated(p))
 					{
 						if( i == engine.getPowerupRow(p) && j == engine.getPowerupCol(p))
 						{
@@ -268,7 +268,7 @@ public class InterfaceGUI implements KeyListener {
 				
 				for(int e = 0; e < 6; e++)
 				{
-					if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e)  && engine.isEnemyAlive(e) == true)
+					if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e)  && engine.isEnemyAlive(e))
 					{
 						counter++;
 					}
@@ -291,7 +291,7 @@ public class InterfaceGUI implements KeyListener {
 					}
 					for(int e = 0; e < 6; e++)
 					{
-						if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e) && limit < 1 && engine.isEnemyAlive(e) == true)
+						if( i == engine.getEnemyRow(e) && j == engine.getEnemyCol(e) && limit < 1 && engine.isEnemyAlive(e))
 						{
 							engine.revealEnemy(e);
 							JLabel imgEnemy = engine.getEnemyPic(e);
@@ -479,7 +479,7 @@ public class InterfaceGUI implements KeyListener {
 		if( e.getKeyCode() == KeyEvent.VK_RIGHT)
 		{
 			engine.movePlayer(4);
-			if(engine.checkForPlayer() == true)
+			if(engine.checkForPlayer())
 			{
 				JOptionPane.showMessageDialog(f, "YOU WERE STABBED!!");
 				if(engine.getLife() == 0)
@@ -499,7 +499,7 @@ public class InterfaceGUI implements KeyListener {
 				}
 			}
 			engine.moveEnemy();
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -511,7 +511,7 @@ public class InterfaceGUI implements KeyListener {
 		else if( e.getKeyCode() == KeyEvent.VK_LEFT)
 		{
 			engine.movePlayer(3);
-			if(engine.checkForPlayer() == true)
+			if(engine.checkForPlayer())
 			{
 				JOptionPane.showMessageDialog(f, "YOU WERE STABBED!!");
 				if(engine.getLife() == 0)
@@ -521,7 +521,7 @@ public class InterfaceGUI implements KeyListener {
 							+ "\nENEMIES KILLED: " + engine.getEnemiesKilled() + "\nPOWERUPS OBTAINED: " + engine.getPowerupsObtained(), "Score", JOptionPane.INFORMATION_MESSAGE);
 					System.exit(0);
 				}
-				if(engine.isDebugging() == true)
+				if(engine.isDebugging())
 				{
 					debugPaint(0);
 				}
@@ -531,7 +531,7 @@ public class InterfaceGUI implements KeyListener {
 				}
 			}
 			engine.moveEnemy();
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -543,7 +543,7 @@ public class InterfaceGUI implements KeyListener {
 		else if( e.getKeyCode() == KeyEvent.VK_DOWN)
 		{
 			engine.movePlayer(2);
-			if(engine.checkForPlayer() == true)
+			if(engine.checkForPlayer())
 			{
 				JOptionPane.showMessageDialog(f, "YOU WERE STABBED!!");
 				if(engine.getLife() == 0)
@@ -553,7 +553,7 @@ public class InterfaceGUI implements KeyListener {
 							+ "\nENEMIES KILLED: " + engine.getEnemiesKilled() + "\nPOWERUPS OBTAINED: " + engine.getPowerupsObtained(), "Score", JOptionPane.INFORMATION_MESSAGE);
 					System.exit(0);
 				}
-				if(engine.isDebugging() == true)
+				if(engine.isDebugging())
 				{
 					debugPaint(0);
 				}
@@ -563,7 +563,7 @@ public class InterfaceGUI implements KeyListener {
 				}
 			}
 			engine.moveEnemy();
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -575,7 +575,7 @@ public class InterfaceGUI implements KeyListener {
 		else if( e.getKeyCode() == KeyEvent.VK_UP)
 		{
 			engine.movePlayer(1);
-			if(engine.checkForPlayer() == true)
+			if(engine.checkForPlayer())
 			{
 				JOptionPane.showMessageDialog(f, "YOU WERE STABBED!!");
 				if(engine.getLife() == 0)
@@ -585,7 +585,7 @@ public class InterfaceGUI implements KeyListener {
 							+ "\nENEMIES KILLED: " + engine.getEnemiesKilled() + "\nPOWERUPS OBTAINED: " + engine.getPowerupsObtained(), "Score", JOptionPane.INFORMATION_MESSAGE);
 					System.exit(0);
 				}
-				if(engine.isDebugging() == true)
+				if(engine.isDebugging())
 				{
 					debugPaint(0);
 				}
@@ -595,7 +595,7 @@ public class InterfaceGUI implements KeyListener {
 				}
 			}
 			engine.moveEnemy();
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -607,11 +607,11 @@ public class InterfaceGUI implements KeyListener {
 		
 		if(e.getKeyCode() == KeyEvent.VK_4)
 		{
-			if(engine.look(4) == true)
+			if(engine.look(4))
 			{
 				JOptionPane.showMessageDialog(f, "NINJA SPOTTED", "WARNING",JOptionPane.ERROR_MESSAGE);
 			}
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -623,11 +623,11 @@ public class InterfaceGUI implements KeyListener {
 		}
 		else if(e.getKeyCode() == KeyEvent.VK_3)
 		{
-			if(engine.look(3) == true)
+			if(engine.look(3))
 			{
 				JOptionPane.showMessageDialog(f, "NINJA SPOTTED", "WARNING",JOptionPane.ERROR_MESSAGE);
 			}
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -639,11 +639,11 @@ public class InterfaceGUI implements KeyListener {
 		}
 		else if(e.getKeyCode() == KeyEvent.VK_2)
 		{
-			if(engine.look(2) == true)
+			if(engine.look(2))
 			{
 				JOptionPane.showMessageDialog(f, "NINJA SPOTTED", "WARNING",JOptionPane.ERROR_MESSAGE);
 			}
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -655,11 +655,11 @@ public class InterfaceGUI implements KeyListener {
 		}
 		else if(e.getKeyCode() == KeyEvent.VK_1)
 		{
-			if(engine.look(1) == true)
+			if(engine.look(1))
 			{
 				JOptionPane.showMessageDialog(f, "NINJA SPOTTED", "WARNING",JOptionPane.ERROR_MESSAGE);
 			}
-			if(engine.isDebugging() == true)
+			if(engine.isDebugging())
 			{
 				debugPaint(0);
 			}
@@ -731,7 +731,7 @@ public class InterfaceGUI implements KeyListener {
 				JOptionPane.showMessageDialog(f,"DOCUMENT FOUND.");
 				JOptionPane.showMessageDialog(f,"LEVEL CLEARED!!");
 				engine.levelUp();
-				if(engine.isDebugging() == true)
+				if(engine.isDebugging())
 				{
 					debugPaint(0);
 				}
