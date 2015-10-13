@@ -156,7 +156,7 @@ public class Spy extends Object implements BallOfEnergy, Serializable{
 	 */
 	public void turnsLeft()
 	{
-		if( impenetrable == true)
+		if(impenetrable)
 		{
 			turns--;
 		}
