@@ -145,11 +145,11 @@ public class Room extends Object implements BallOfEnergy, Serializable{
 	public String getSymbol()
 	{
 		String name;
-		if(hidden == true)
+		if(hidden)
 		{
 			name = "X";
 		}
-		if(cheat == true && document == true)
+		if(cheat && document)
 		{
 			name = "D";
 		}
@@ -173,11 +173,11 @@ public class Room extends Object implements BallOfEnergy, Serializable{
 	public JLabel getPic()
 	{
 		JLabel imgTemp;
-		if(hidden == true)
+		if(hidden)
 		{
 			imgTemp = new JLabel(new ImageIcon("GameImgs/FogAlpha.jpg"));
 		}
-		if(cheat == true && document == true)
+		if(cheat && document)
 		{
 			imgTemp = new JLabel(new ImageIcon("GameImgs/Image-2.jpg"));
 		}
