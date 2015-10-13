@@ -87,7 +87,7 @@ public class InterfaceGUI implements KeyListener {
 				
 				for( int p = 0; p < 3; p++)
 				{
-					if( engine.isPowerupActivated(p) == true)
+					if( engine.isPowerupActivated(p))
 					{
 						if( i == engine.getPowerupRow(p) && j == engine.getPowerupCol(p))
 						{
@@ -301,7 +301,7 @@ public class InterfaceGUI implements KeyListener {
 					}
 					for( int p = 0; p < 3; p++)
 					{
-						if( engine.isPowerupActivated(p) == true)
+						if(engine.isPowerupActivated(p))
 						{
 							if( i == engine.getPowerupRow(p) && j == engine.getPowerupCol(p) && limit < 1)
 							{
@@ -391,7 +391,7 @@ public class InterfaceGUI implements KeyListener {
     	 				}
     					success = true;
     				}
-    			}while(success == false);
+    			}while(!success);
     		}
     	
     	});
@@ -489,7 +489,7 @@ public class InterfaceGUI implements KeyListener {
 							+ "\nENEMIES KILLED: " + engine.getEnemiesKilled() + "\nPOWERUPS OBTAINED: " + engine.getPowerupsObtained(), "Score", JOptionPane.INFORMATION_MESSAGE);
 					System.exit(0);
 				}
-				if(engine.isDebugging() == true)
+				if(engine.isDebugging())
 				{
 					debugPaint(0);
 				}
@@ -724,9 +724,9 @@ public class InterfaceGUI implements KeyListener {
 		}
 
 		
-		if(engine.getCheckRoom() == true)
+		if(engine.getCheckRoom())
 		{
-			if( engine.getDocFound() == true)
+			if(engine.getDocFound())
 			{
 				JOptionPane.showMessageDialog(f,"DOCUMENT FOUND.");
 				JOptionPane.showMessageDialog(f,"LEVEL CLEARED!!");
