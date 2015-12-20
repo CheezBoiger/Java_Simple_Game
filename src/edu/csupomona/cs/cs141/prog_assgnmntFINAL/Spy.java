@@ -105,7 +105,7 @@ public class Spy extends Object implements BallOfEnergy, Serializable{
 	public void takeLife()
 	{
 		lives--;
-		if( lives == 0 )
+		if( lives <= 0 )
 		{
 			alive = false;
 		}
