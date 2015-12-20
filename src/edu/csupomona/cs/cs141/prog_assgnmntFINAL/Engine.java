@@ -609,7 +609,8 @@ public class Engine implements Serializable{
 							//if player moves onto a powerup, active the powerup
 							for( int p = 0; p < powerups.length; p++)
 							{
-								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] && powerups[p].isActive() == true)
+								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] 
+									&& powerups[p].isActive())
 								{
 									powerups[p].activate(player, rooms);
 									powerupsObtained++;
@@ -637,7 +638,8 @@ public class Engine implements Serializable{
 							player.getLocation(player.getRow()+1, player.getCol());
 							for( int p = 0; p < powerups.length; p++)
 							{
-								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] && powerups[p].isActive() == true)
+								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] 
+									&& powerups[p].isActive())
 								{
 									powerups[p].activate(player, rooms);
 									powerupsObtained++;
@@ -675,7 +677,8 @@ public class Engine implements Serializable{
 							player.getLocation(player.getRow(), player.getCol()-1);
 							for( int p = 0; p < powerups.length; p++)
 							{
-								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] && powerups[p].isActive() == true)
+								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] 
+									&& powerups[p].isActive())
 								{
 									powerups[p].activate(player, rooms);
 									powerupsObtained++;
@@ -702,7 +705,8 @@ public class Engine implements Serializable{
 							player.getLocation(player.getRow(), player.getCol()+1);
 							for( int p = 0; p < powerups.length; p++)
 							{
-								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] && powerups[p].isActive() == true)
+								if( world[powerups[p].getRow()][powerups[p].getCol()] == world[player.getRow()][player.getCol()] 
+									&& powerups[p].isActive())
 								{
 									powerups[p].activate(player, rooms);
 									powerupsObtained++;
